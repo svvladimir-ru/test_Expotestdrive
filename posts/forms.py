@@ -4,15 +4,15 @@ from .models import Post
 from django import forms
 
 
-
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ("text", "image")
+        fields = ("text", "image", "file")
 
         labels = {
             "text": "Текст записи",
             "image": "Изображение",
+            "file": "Файл",
         }
 
 
